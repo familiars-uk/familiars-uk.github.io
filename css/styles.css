@@ -79,3 +79,7 @@ section {
     text-transform: lowercase;
     width: 100%;
 }
+
+.bottom-footer {
+    text-align: center;
+}
