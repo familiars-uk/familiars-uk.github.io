@@ -1,0 +1,81 @@
+.navbar-brand {
+    font-family: Helvetica, san-serif
+    font-weight: bold;
+    font-size:   32px;
+}
+
+.navbar-default {
+    background-color: #000099;
+    border: 0px;
+    border-radius: 0px;
+    margin: 0px;
+}
+
+.navbar-default a:link.navbar-brand, .navbar-default a:visited.navbar-brand {
+    color: #aaaaaa;
+}
+
+.navbar-default a:active.navbar-brand, .navbar-default a:hover.navbar-brand {
+    color: #cccccc;
+}
+
+.navbar-nav a {
+    margin-left:     15px;
+    font-family:     Courier New, monospace;
+    font-size:       20px;
+    text-decoration: none;
+    text-transform:  lowercase;
+}
+
+#navbar-content .navbar-nav a:link, #navbar-content .navbar-nav a:visited {
+    background-color: #3333cc;
+    color: #aaaaaa;
+}
+
+#navbar-content .navbar-nav a:active, #navbar-content .navbar-nav a:hover {
+    background-color: #000099;
+    color: #cccccc;
+}
+
+#main-menu {
+    background-color: #3333cc;
+    padding-top:      5px;
+    padding-bottom:   5px;
+}
+
+#main-menu a {
+    font-family:     Courier New, monospace;
+    font-size:       24px;
+    text-decoration: none;
+    text-transform:  lowercase;
+}
+
+#main-menu a:link, #main-menu a:visited {
+    background-color: #3333cc;
+    color: #aaaaaa;
+}
+
+#main-menu a:active, #main-menu a:hover {
+    background-color: #000099;
+    color: #cccccc;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 40px 5px 5px 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.label {
+    background-color: #000000;
+    border-radius: 0px;
+    color: #cccccc;
+    font-size: 1.8em;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    text-align: left;
+    text-transform: lowercase;
+    width: 100%;
+}
