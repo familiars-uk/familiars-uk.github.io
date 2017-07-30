@@ -43,6 +43,10 @@
     padding-bottom:   5px;
 }
 
+#main-menu div {
+    text-align: center;
+}
+
 #main-menu a {
     font-family:     Courier New, monospace;
     font-size:       24px;
