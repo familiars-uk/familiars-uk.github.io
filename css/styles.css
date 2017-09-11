@@ -1,40 +1,40 @@
 .navbar-brand {
-    font-family: Helvetica, san-serif;
-    font-weight: bold;
-    font-size:   32px;
+    font-family:      Helvetica, san-serif;
+    font-weight:      bold;
+    font-size:        32px;
 }
 
 .navbar-default {
     background-color: #272727;
-    border: 0px;
-    border-radius: 0px;
-    margin: 0px;
+    border:           0px;
+    border-radius:    0px;
+    margin:           0px;
 }
 
 .navbar-default a:link.navbar-brand, .navbar-default a:visited.navbar-brand {
-    color: #aaaaaa;
+    color:            #aaaaaa;
 }
 
 .navbar-default a:active.navbar-brand, .navbar-default a:hover.navbar-brand {
-    color: #cccccc;
+    color:            #cccccc;
 }
 
 .navbar-nav a {
-    margin-left:     15px;
-    font-family:     Courier New, monospace;
-    font-size:       20px;
-    text-decoration: none;
-    text-transform:  lowercase;
+    margin-left:      15px;
+    font-family:      Courier New, monospace;
+    font-size:        20px;
+    text-decoration:  none;
+    text-transform:   lowercase;
 }
 
 #navbar-content .navbar-nav a:link, #navbar-content .navbar-nav a:visited {
     background-color: #000000;
-    color: #aaaaaa;
+    color:            #aaaaaa;
 }
 
 #navbar-content .navbar-nav a:active, #navbar-content .navbar-nav a:hover {
     background-color: #272727;
-    color: #cccccc;
+    color:            #cccccc;
 }
 
 #main-menu {
@@ -44,48 +44,48 @@
 }
 
 #main-menu div {
-    text-align: center;
+    text-align:       center;
 }
 
 #main-menu a {
-    font-family:     Courier New, monospace;
-    font-size:       24px;
-    text-decoration: none;
-    text-transform:  lowercase;
+    font-family:      Courier New, monospace;
+    font-size:        24px;
+    text-decoration:  none;
+    text-transform:   lowercase;
 }
 
 #main-menu a:link, #main-menu a:visited {
     background-color: #000000;
-    color: #aaaaaa;
+    color:            #aaaaaa;
 }
 
 #main-menu a:active, #main-menu a:hover {
     background-color: #272727;
-    color: #cccccc;
+    color:            #cccccc;
 }
 
 section {
     background-color: #ffffff;
-    padding: 40px 5px 5px 5px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    position: relative;
+    padding:          40px 5px 5px 5px;
+    margin-bottom:    20px;
+    margin-top:       10px;
+    position:         relative;
 }
 
 .label {
     background-color: #272727;
-    border-radius: 0px;
-    color: #cccccc;
-    font-size: 1.8em;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    text-align: left;
-    text-transform: lowercase;
-    width: 100%;
+    border-radius:    0px;
+    color:            #cccccc;
+    font-size:        1.8em;
+    position:         absolute;
+    left:             0px;
+    top:              0px;
+    text-align:       left;
+    text-transform:   lowercase;
+    width:            100%;
 }
 
 .bottom-footer {
-    text-align: center;
+    text-align:       center;
     background-color: #ffffff;
 }
