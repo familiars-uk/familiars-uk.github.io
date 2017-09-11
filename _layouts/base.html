@@ -15,6 +15,14 @@
         <title>The Familiars</title>
         <link rel="stylesheet" href="{{site.baseurl}}/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
+
+        <!-- page-specific CSS -->
+        {% if page.css %}
+        {% for css in page.css %}
+        <link rel="stylesheet" href="{{site.baseurl}}/css/{{css.name}}.css">
+        {% endfor %}
+        {% endif %}
+
         <link rel="icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="{{site.baseurl}}/favicon.ico" type="image/x-icon">
     </head>
