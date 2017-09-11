@@ -86,5 +86,12 @@
         <script src="{{site.baseurl}}/js/jquery-1.11.3.min.js"></script>
         <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
         <script src="{{site.baseurl}}/js/navbar.js"></script>
+
+        <!-- page-specific scripts -->
+        {% if page.scripts %}
+        {% for script in page.scripts %}
+        <script src="{{site.baseurl}}/js/{{script.name}}.js"></script>
+        {% endfor %}
+        {% endif %}
     </body>
 </html>
