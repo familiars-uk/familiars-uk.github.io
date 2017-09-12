@@ -1,0 +1,27 @@
+#controls {
+    text-align:       center;
+}
+
+table {
+    width:            100%;
+}
+
+table, th, td {
+    border-style:     solid;
+    border-width:     1px;
+}
+
+th, td {
+    padding:          5px;
+}
+
+th {
+    color:            #aaaaaa;
+    background-color: #272727;
+    text-align:       center;
+}
+
+td.date {
+    width:            40px;
+    text-align:       center;
+}
