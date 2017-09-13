@@ -8,7 +8,7 @@ $(document).ready(function() {
 
         var name = $("#name").val();
         var email = $("#email").val();
-        var comments = $("#comments").val();
+        var message = $("#message").val();
 
         $.ajax({
             url: atob(target),
