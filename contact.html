@@ -1,11 +1,36 @@
 ---
 layout: base
+css:
+- name: contact
+scripts:
+- name: contact
 ---
 
 <div class="row">
                 <div class="col-xs-12">
                     <section id="contact">
                         <div class="label">Contact us</div>
+                        <div id="form">
+                            <form id="contact">
+                                <label for="name">Name:</label>
+                                <br/>
+                                <input type="text" id="name">
+                                <br/>
+                                <label for="email">Email:</label>
+                                <br/>
+                                <input type="email" id="email">
+                                <br/>
+                                <label for="message">Message:</label>
+                                <br/>
+                                <textarea id="message" cols="40"rows="5">
+                                </textarea>
+                                <br/>
+                                <input type="submit" id="submit" value="Send">
+                            </form>
+                        </div>
+                        <div id="thanks">
+                            Thanks! We'll be in touch.
+                        </div>
                     </section>
                 </div>
             </div>
