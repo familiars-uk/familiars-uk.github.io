@@ -11,7 +11,10 @@ function zeroPad(value) {
     return ("0" + value).slice(-2);
 }
 
-function makeCalendar(year, month, data) {
+function makeCalendar(date, data) {
+    var year  = date.getFullYear();
+    var month = date.getMonth();
+
     var table = "";
     var datesThisMonth = 0;
 
@@ -46,37 +49,32 @@ function makeCalendar(year, month, data) {
     return table;
 }
 
-function update(year, month, data) {
-    var date        = new Date(year, month);
-    var actualYear  = date.getFullYear();
-    var actualMonth = date.getMonth();
-
+function update(date, data) {
     $("#bck").off('click');
     $("#fwd").off('click');
 
-    $("#dates").html(makeCalendar(actualYear, actualMonth, data));
+    $("#dates").html(makeCalendar(date, data));
+
+    var actualYear  = date.getFullYear();
+    var actualMonth = date.getMonth();
 
     $("#bck").on('click', function() {
-        update(actualYear, actualMonth - 1, data);
+        update(new Date(actualYear, actualMonth - 1), data);
     });
     $("#fwd").on('click', function() {
-        update(actualYear, actualMonth + 1, data);
+        update(new Date(actualYear, actualMonth + 1), data);
     });
 }
 
 $(document).ready(function() {
     $("#dates").html("loading...");
 
-    var date  = new Date();
-    var year  = date.getFullYear();
-    var month = date.getMonth();
-
     $.ajax({
         url: "data/dates.json",
         method: "GET",
         dataType: "json",
         success: function(data) {
-            update(year, month, data);
+            update(new Date(), data);
         }
     });
 });
