@@ -21,8 +21,11 @@ function mod(number, divisor) {
 }
 
 function showImage(index) {
-    var html = "<img src=\"images/gallery/" + images[index] + ".jpg\">";
-    $("#photo").html(html);
+    var photoHtml = "<img src=\"images/gallery/" + images[index] + ".jpg\">";
+    $("#photo").html(photoHtml);
+
+    var counterHtml = (index + 1) + " / " + images.length;
+    $("#counter").html(counterHtml);
 }
 
 $(document).ready(function() {
