@@ -24,15 +24,18 @@ function makeCalendar(date, data) {
 
     for (var day = 1; day <= daysInMonth(year, month); day++) {
         var dateString = year + "-" + zeroPad(month + 1) + "-" + zeroPad(day);
-        var details = data[dateString];
+        var gig = data[dateString];
 
-        if (details)
+        if (gig)
         {
             datesThisMonth += 1;
 
             table += "<tr>";
-            table += "<td class='date'>" + day + "</td>";
-            table += "<td>" + details + "</td>";
+            table += "<td class='date' rowspan='2'>" + day + "</td>";
+            table += "<td>" + gig.location + "</td>";
+            table += "</tr>";
+            table += "<tr>";
+            table += "<td>" + gig.details + "</td>";
             table += "</tr>";
         }
     }
