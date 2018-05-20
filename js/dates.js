@@ -11,6 +11,23 @@ function daysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate();
 }
 
+function getOrdinalSuffix(day) {
+    switch(day) {
+        case 1:
+        case 21:
+        case 31:
+            return "st";
+        case 2:
+        case 22:
+            return "nd";
+        case 3:
+        case 23:
+            return "rd";
+        default:
+            return "th";
+    }
+}
+
 function zeroPad(value) {
     return ("0" + value).slice(-2);
 }
@@ -38,7 +55,7 @@ function makeCalendar(date, data) {
 
             table += "<tr>";
             table += "<td class='date' rowspan='2'>"
-                     + dayString + " " + day + "</td>";
+                     + dayString + " " + day + getOrdinalSuffix(day) + "</td>";
             table += "<td>" + gig.location + "</td>";
             table += "</tr>";
             table += "<tr>";
