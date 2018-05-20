@@ -3,6 +3,10 @@ var monthNames = [
     "July", "August", "September", "October", "November", "December"
 ];
 
+var dayNames = [
+    "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+]
+
 function daysInMonth(year, month) {
     return new Date(year, month + 1, 0).getDate();
 }
@@ -23,7 +27,9 @@ function makeCalendar(date, data) {
     table += "<th colspan='2'>" + monthNames[month] + " " + year + "</th>";
 
     for (var day = 1; day <= daysInMonth(year, month); day++) {
+        var daysDate = new Date(year, month, day);
         var dateString = year + "-" + zeroPad(month + 1) + "-" + zeroPad(day);
+        var dayString  = dayNames[daysDate.getDay()];
         var gig = data[dateString];
 
         if (gig)
@@ -31,7 +37,8 @@ function makeCalendar(date, data) {
             datesThisMonth += 1;
 
             table += "<tr>";
-            table += "<td class='date' rowspan='2'>" + day + "</td>";
+            table += "<td class='date' rowspan='2'>"
+                     + dayString + " " + day + "</td>";
             table += "<td>" + gig.location + "</td>";
             table += "</tr>";
             table += "<tr>";
