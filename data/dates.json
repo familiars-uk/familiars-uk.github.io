@@ -11,8 +11,16 @@
         "location": "The Grapes, Cambridge",
         "details": "9 until late"
     },
-    "2018-11-03": {
-        "location": "The Boathouse, Cambridge",
+    "2018-10-13": {
+        "location": "The Three Tuns, Huntingdon",
         "details": "9 until late"
+    },
+    "2018-10-25": {
+        "location": "The Tap Room, St. Ives",
+        "details": "9 until late"
+    },
+    "2018-12-15": {
+        "location": "The Brewery Tap, Waterbeach",
+        "details": "8 to 11"
     }
 }
