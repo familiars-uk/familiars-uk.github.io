@@ -5,4 +5,4 @@ docker run -i -t --rm \
     -v $PWD:/srv/jekyll \
     -p 4000:4000 \
     jekyll/jekyll \
-    bundle install && bundle exec jekyll serve -w
+    jekyll serve -w
