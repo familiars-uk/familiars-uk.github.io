@@ -64,6 +64,17 @@
     color:            #cccccc;
 }
 
+div#header-fullsize {
+    height:           80px;
+}
+
+div#icons {
+    display:          flex;
+    align-items:      center;
+    justify-content:  center;
+    height:           100%;
+}
+
 section {
     background-color: #ffffff;
     padding:          5px 5px 5px 5px;
