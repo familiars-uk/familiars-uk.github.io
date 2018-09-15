@@ -19,7 +19,7 @@
     color:            #cccccc;
 }
 
-.navbar-nav a {
+#navbar-content .navbar-nav a {
     margin-left:      0px;
     font-family:      Courier New, monospace;
     font-size:        20px;
