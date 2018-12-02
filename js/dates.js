@@ -33,64 +33,64 @@ function zeroPad(value) {
 }
 
 function makeCalendar(date, data) {
-    var year  = date.getFullYear();
-    var month = date.getMonth();
+    var currentYear  = date.getFullYear();
+    var currentMonth = date.getMonth();
+    var currentDay   = date.getDate();
 
-    var table = "";
-    var datesThisMonth = 0;
+    var html = "";
 
-    table += "<div id='calendar'>"
-    table += "<table>";
-    table += "<th colspan='2'>" + monthNames[month] + " " + year + "</th>";
+    html += "<div id='calendar'>"
 
-    for (var day = 1; day <= daysInMonth(year, month); day++) {
-        var daysDate = new Date(year, month, day);
-        var dateString = year + "-" + zeroPad(month + 1) + "-" + zeroPad(day);
-        var dayString  = dayNames[daysDate.getDay()];
-        var gig = data[dateString];
-
-        if (gig)
+    for (var year in data)
+    {
+        if (year >= currentYear)
         {
-            datesThisMonth += 1;
+            html += "<h2>" + year + "</h2>";
+            html += "<table>";
 
-            table += "<tr>";
-            table += "<td class='date' rowspan='2'>"
-                     + dayString + " " + day + getOrdinalSuffix(day) + "</td>";
-            table += "<td>" + gig.location + "</td>";
-            table += "</tr>";
-            table += "<tr>";
-            table += "<td>" + gig.details + "</td>";
-            table += "</tr>";
+            for (var month in data[year])
+            {
+                if (month >= currentMonth || year > currentYear)
+                {
+                    html += "<th colspan='2'>"
+                            + monthNames[parseInt(month)]
+                            + "</th>";
+
+                    for (var day in data[year][month])
+                    {
+                        if (day >= currentDay)
+                        {
+                            var gig       = data[year][month][day];
+                            var daysDate  = new Date(year, month, day);
+                            var dayString = dayNames[daysDate.getDay()];
+
+                            html += "<tr>";
+                            html += "<td class='date' rowspan='2'>"
+                                     + dayString + " "
+                                     + day + getOrdinalSuffix(parseInt(day))
+                                     + "</td>";
+                            html += "<td>" + gig.location + "</td>";
+                            html += "</tr>";
+                            html += "<tr>";
+                            html += "<td>" + gig.details + "</td>";
+                            html += "</tr>";
+                        }
+                    }
+
+                }
+            }
+
+            html += "<table>";
         }
     }
 
-    if (0 == datesThisMonth) {
-        table += "<tr>";
-        table += "<td colspan='2'>No dates this month</td>";
-        table += "</tr>";
-    }
+    html += "</div>";
 
-    table += "</table>";
-    table += "</div>";
-
-    return table;
+    return html
 }
 
 function update(date, data) {
-    $("#bck").off('click');
-    $("#fwd").off('click');
-
     $("#dates").html(makeCalendar(date, data));
-
-    var actualYear  = date.getFullYear();
-    var actualMonth = date.getMonth();
-
-    $("#bck").on('click', function() {
-        update(new Date(actualYear, actualMonth - 1), data);
-    });
-    $("#fwd").on('click', function() {
-        update(new Date(actualYear, actualMonth + 1), data);
-    });
 }
 
 $(document).ready(function() {

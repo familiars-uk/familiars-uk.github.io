@@ -1,46 +1,72 @@
 {
-    "2018-05-25": {
-        "location": "The Boathouse, Cambridge",
-        "details": "9pm until late"
+    "2018": {
+        "04": {
+            "25": {
+                "location": "The Boathouse, Cambridge",
+                "details": "9pm until late"
+            }
+        },
+        "05": {
+            "29": {
+                "location": "The Three Tuns, Huntingdon",
+                "details": "9pm until late"
+            }
+        },
+        "07": {
+            "18": {
+                "location": "The Grapes, Cambridge",
+                "details": "9pm until late"
+            }
+        },
+        "08": {
+            "29": {
+                "location": "The Nelson's Head, St. Ives",
+                "details": "9pm until late"
+            }
+        },
+        "09": {
+            "13": {
+                "location": "The Three Tuns, Huntingdon",
+                "details": "9pm until late"
+            }
+        },
+        "09": {
+            "25": {
+                "location": "The Tap Room, St. Ives",
+                "details": "9pm until late"
+            }
+        },
+        "11": {
+            "15": {
+                "location": "The Brewery Tap, Waterbeach",
+                "details": "8:30 to 11pm"
+            }
+        }
     },
-    "2018-06-29": {
-        "location": "The Three Tuns, Huntingdon",
-        "details": "9pm until late"
-    },
-    "2018-08-18": {
-        "location": "The Grapes, Cambridge",
-        "details": "9pm until late"
-    },
-    "2018-09-29": {
-        "location": "The Nelson's Head, St. Ives",
-        "details": "9pm until late"
-    },
-    "2018-10-13": {
-        "location": "The Three Tuns, Huntingdon",
-        "details": "9pm until late"
-    },
-    "2018-10-25": {
-        "location": "The Tap Room, St. Ives",
-        "details": "9pm until late"
-    },
-    "2018-12-15": {
-        "location": "The Brewery Tap, Waterbeach",
-        "details": "8:30 to 11pm"
-    },
-    "2019-01-20": {
-        "location": "The Seven Wives, St. Ives",
-        "details": "4 to 7pm"
-    },
-    "2019-04-27": {
-        "location": "The Grapes, Bury St. Edmunds",
-        "details": "10pm to 1am"
-    },
-    "2019-05-18": {
-        "location": "The Brook, Cambridge",
-        "details": "8:30 to 11pm"
-    },
-    "2019-08-30": {
-        "location": "The Grapes, Bury St. Edmunds",
-        "details": "10pm to 1am"
+    "2019": {
+        "00": {
+            "20": {
+                "location": "The Seven Wives, St. Ives",
+                "details": "4 to 7pm"
+            }
+        },
+        "03": {
+            "27": {
+                "location": "The Grapes, Bury St. Edmunds",
+                "details": "10pm to 1am"
+            }
+        },
+        "04": {
+            "18": {
+                "location": "The Brook, Cambridge",
+                "details": "8:30 to 11pm"
+            }
+        },
+        "07": {
+            "31": {
+                "location": "The Grapes, Bury St. Edmunds",
+                "details": "10pm to 1am"
+            }
+        }
     }
 }
