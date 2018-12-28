@@ -60,7 +60,9 @@ function makeCalendar(date, data) {
 
                     for (var day in data[year][month])
                     {
-                        if (day >= currentDay)
+                        if (   day   >= currentDay
+                            || month >  currentMonth
+                            || year  >  currentYear)
                         {
                             var gig       = data[year][month][day];
                             var daysDate  = new Date(year, month, day);
