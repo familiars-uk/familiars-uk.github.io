@@ -28,60 +28,92 @@ function getOrdinalSuffix(day) {
     }
 }
 
+function filterData(data, currentYear, currentMonth, currentDay)
+{
+    var result = {};
+
+    for (var year in data)
+    {
+        if (year < currentYear)
+            continue;
+        else if (year > currentYear)
+            result[year] = data[year];
+        else
+        {
+            for (var month in data[year])
+            {
+                if (month < currentMonth)
+                    continue;
+                else if (month > currentMonth)
+                    result[year][month] = data[year][month];
+                else
+                {
+                    for (var day in data[year][month])
+                    {
+                        if (day < currentDay)
+                            continue;
+                        else
+                        {
+                            if (!(year in result))
+                                result[year] = {};
+                            if (!(month in result[year]))
+                                result[year][month] = {};
+
+                            result[month][day] = data[month][day];
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return result;
+}
+
 function makeCalendar(date, data) {
     var currentYear  = date.getFullYear();
     var currentMonth = date.getMonth();
     var currentDay   = date.getDate();
 
+    filteredData = filterData(data, currentYear, currentMonth, currentDay);
+
     var html = "";
 
     html += "<div id='calendar'>"
 
-    for (var year in data)
+    for (var year in filteredData)
     {
-        if (year >= currentYear)
+        html += "<h2>" + year + "</h2>";
+        html += "<table>";
+
+        for (var month in filteredData[year])
         {
-            html += "<h2>" + year + "</h2>";
-            html += "<table>";
+            html += "<tr>";
+            html += "<th colspan='2'>"
+                    + monthNames[parseInt(month)]
+                    + "</th>";
+            html += "</tr>";
 
-            for (var month in data[year])
+            for (var day in filteredData[year][month])
             {
-                if (month >= currentMonth || year > currentYear)
-                {
-                    html += "<tr>";
-                    html += "<th colspan='2'>"
-                            + monthNames[parseInt(month)]
-                            + "</th>";
-                    html += "</tr>";
+                var gig       = filteredData[year][month][day];
+                var daysDate  = new Date(year, month, day);
+                var dayString = dayNames[daysDate.getDay()];
 
-                    for (var day in data[year][month])
-                    {
-                        if (   day   >= currentDay
-                            || month >  currentMonth
-                            || year  >  currentYear)
-                        {
-                            var gig       = data[year][month][day];
-                            var daysDate  = new Date(year, month, day);
-                            var dayString = dayNames[daysDate.getDay()];
-
-                            html += "<tr>";
-                            html += "<td class='date' rowspan='2'>"
-                                     + dayString + " "
-                                     + day + getOrdinalSuffix(parseInt(day))
-                                     + "</td>";
-                            html += "<td>" + gig.location + "</td>";
-                            html += "</tr>";
-                            html += "<tr>";
-                            html += "<td>" + gig.details + "</td>";
-                            html += "</tr>";
-                        }
-                    }
-
-                }
+                html += "<tr>";
+                html += "<td class='date' rowspan='2'>"
+                         + dayString + " "
+                         + day + getOrdinalSuffix(parseInt(day))
+                         + "</td>";
+                html += "<td>" + gig.location + "</td>";
+                html += "</tr>";
+                html += "<tr>";
+                html += "<td>" + gig.details + "</td>";
+                html += "</tr>";
             }
-
-            html += "<table>";
         }
+
+        html += "<table>";
     }
 
     html += "</div>";
