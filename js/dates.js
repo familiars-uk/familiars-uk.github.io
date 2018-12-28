@@ -52,9 +52,11 @@ function makeCalendar(date, data) {
             {
                 if (month >= currentMonth || year > currentYear)
                 {
+                    html += "<tr>";
                     html += "<th colspan='2'>"
                             + monthNames[parseInt(month)]
                             + "</th>";
+                    html += "</tr>";
 
                     for (var day in data[year][month])
                     {
