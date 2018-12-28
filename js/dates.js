@@ -28,10 +28,6 @@ function getOrdinalSuffix(day) {
     }
 }
 
-function zeroPad(value) {
-    return ("0" + value).slice(-2);
-}
-
 function makeCalendar(date, data) {
     var currentYear  = date.getFullYear();
     var currentMonth = date.getMonth();
