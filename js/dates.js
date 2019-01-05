@@ -59,7 +59,7 @@ function filterData(data, currentYear, currentMonth, currentDay)
                             if (!(month in result[year]))
                                 result[year][month] = {};
 
-                            result[month][day] = data[month][day];
+                            result[year][month][day] = data[year][month][day];
                         }
                     }
                 }
