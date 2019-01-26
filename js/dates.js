@@ -45,7 +45,12 @@ function filterData(data, currentYear, currentMonth, currentDay)
                 if (month < currentMonth)
                     continue;
                 else if (month > currentMonth)
+                {
+                    if (!(year in result))
+                        result[year] = {};
+
                     result[year][month] = data[year][month];
+                }
                 else
                 {
                     for (var day in data[year][month])
