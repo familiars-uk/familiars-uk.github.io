@@ -83,6 +83,12 @@
                 "location": "The Grapes, Bury St. Edmunds",
                 "details": "10pm to 1am"
             }
+        },
+        "10": {
+            "30": {
+                "location": "The Three Tuns, Huntingdon",
+                "details": "9pm until late"
+            }
         }
     }
 }
